@@ -2,7 +2,7 @@
     "name": "RestaurantOwner",
     "fields": [],
     "relationships": [],
-    "changelogDate": "20200422122000",
+    "changelogDate": "20200422200800",
     "javadoc": "The Restaurateur entity.",
     "entityTableName": "restaurant_owner",
     "dto": "no",

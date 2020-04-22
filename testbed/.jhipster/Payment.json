@@ -16,7 +16,7 @@
             "ownerSide": false
         }
     ],
-    "changelogDate": "20200422122700",
+    "changelogDate": "20200422201500",
     "javadoc": "The Payment entity.",
     "entityTableName": "payment",
     "dto": "no",

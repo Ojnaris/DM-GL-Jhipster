@@ -71,7 +71,7 @@
             "ownerSide": false
         }
     ],
-    "changelogDate": "20200422121800",
+    "changelogDate": "20200422200600",
     "javadoc": "The UserAccount entity.",
     "entityTableName": "user_account",
     "dto": "no",

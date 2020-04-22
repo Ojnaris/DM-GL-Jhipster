@@ -149,8 +149,8 @@ jhipster:
     default-include-pattern: /api/.*
     title: Coopcycle DM GL
     description: Coopcycle API documentation
-    version: 0.0.2
-    terms-of-service-url: http://coopcycle-terms-of-service.fr
+    version: 0.0.1
+    terms-of-service-url: http://coopcycle-terms_of_service.fr
     contact-name: LOMBARD Myriam
     contact-url: http://coopcycle-contact.fr
     contact-email: myriam.lombard@etu.univ-grenoble-alpes.fr

@@ -23,7 +23,7 @@
             "ownerSide": true
         }
     ],
-    "changelogDate": "20200422122300",
+    "changelogDate": "20200422201100",
     "entityTableName": "notification",
     "dto": "no",
     "pagination": "no",
