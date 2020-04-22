@@ -116,10 +116,10 @@ relationship ManyToMany {
 relationship ManyToOne {
   Product{products required} to Restaurant
   Restaurant{restaurants required} to RestaurantOwner
-  Basket{baskets} to Deliverer
-  Basket{baskets} to Customer
-  Basket{baskets} to RestaurantOwner
-  Role{roles required} to UserAccount
+  Basket{basketsD} to Deliverer
+  Basket{basketsC} to Customer
+  Basket{basketsR} to RestaurantOwner
+  Role{rolesUser required} to UserAccount
   Cooperative{dg} to UserAccount
   Notification{notification} to Basket
 }
