@@ -56,7 +56,7 @@
             "ownerSide": true
         }
     ],
-    "changelogDate": "20200422201400",
+    "changelogDate": "20200423145800",
     "javadoc": "The Product entity.",
     "entityTableName": "product",
     "dto": "no",
