@@ -8,6 +8,7 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.Environment;
@@ -20,32 +21,32 @@ import com.mycompany.myapp.service.MailService;
 @Aspect
 @Component
 public class MailLoggingAspect {
-  private final Environment env;
+    private final Environment env;
 
-  public MailLoggingAspect(Environment env) {
-    this.env = env;
-  }
-
-
-  @Pointcut("execution(public void send*(..))")
-  public void sendEmail() {}
-
-    @Pointcut("within(com.mycompany.myapp.service.MailService)")
-    public void inPackage() {}
-
-  @Around("inPackage() && sendEmail()")
-  public void sendNewMail(JoinPoint joinPoint) throws Throwable {
-    Logger log = LoggerFactory.getLogger("MailService");
-    if(mog.isDebugEnabled()) {
-      log.debug("EnterMail: {}() with argument[s] = {}", joinPoint.getSignature().getName() Arrays.toString(joinPoint.getArgs()));
+    public MailLoggingAspect(Environment env) {
+        this.env = env;
     }
-    try {
-      if(log.isDebugEnabled()) {
-        log.debug("ExitMail: {}()", joinPoint.getSignature().getName());
-      }
-    } catch (IllegalArgumentException e) {
-      log.error("Illegal argument: {} in {}()", Arrays.toString(joinPoint.getArgs()), joinPoint.getSignature().getName());
-      throw e;
-    }
-  }
+
+
+    @Pointcut("execution(public void send*(..))")
+    public void sendEmail() {}
+
+	@Pointcut("within(com.mycompany.myapp.service.MailService)")
+	public void inPackage() {}
+
+    @Around("inPackage() && sendEmail()")
+    public void sendNewEmail(JoinPoint joinPoint) throws Throwable {
+        Logger log = LoggerFactory.getLogger("mailService");
+        if (log.isDebugEnabled()) {
+            log.debug("EnterMail: {}() with argument[s] = {}", joinPoint.getSignature().getName(), Arrays.toString(joinPoint.getArgs()));
+        }
+        try {
+            if (log.isDebugEnabled()) {
+                log.debug("ExitMail: {}()", joinPoint.getSignature().getName());
+            }
+        } catch (IllegalArgumentException e) {
+            log.error("Illegal argument: {} in {}()", Arrays.toString(joinPoint.getArgs()), joinPoint.getSignature().getName());
+            throw e;
+        }
+	}
 }
